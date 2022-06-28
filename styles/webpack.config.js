@@ -2,11 +2,9 @@ const { merge } = require("webpack-merge");
 const singleSpaDefaults = require("webpack-config-single-spa-react");
 
 module.exports = (webpackConfigEnv, argv) => {
-  externals = ['@poc/stylesguide']
-
   const defaultConfig = singleSpaDefaults({
     orgName: "poc",
-    projectName: "backo",
+    projectName: "stylesguide",
     webpackConfigEnv,
     argv,
   });

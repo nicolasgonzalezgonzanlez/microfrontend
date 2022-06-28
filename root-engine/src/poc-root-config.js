@@ -16,5 +16,8 @@ const applications = constructApplications({
 const layoutEngine = constructLayoutEngine({ routes, applications });
 
 applications.forEach(registerApplication);
-layoutEngine.activate();
-start();
+
+System.import("@poc/stylesguide").then(() => {
+  layoutEngine.activate();
+  start();
+});
